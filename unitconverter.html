@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="project">
+    <title>unit convertor</title>
+    <link rel="stylesheet" href="webpg.css">
+</head>
+<body align="center">
+<div class="header">
+    <nav>
+        <div class="logo">
+            <span>
+                Unit Convertor
+            </span>
+        </div>
+    </nav>
+        <table width="100%" height="100" border="5" bgcolor="#8a2be2" >
+
+            <tr>
+                <th>
+                    <p>Enter the number in feet to be converted into meters </p>
+                    <p>
+                        <label>Feet</label>
+                        <input type="number" id="infeet1" placeholder="feet" oninput="meterconvertor(this.value)" onoutput="meterconvertor(this.value)">
+                    </p>
+                    <p>Meter: <span id="outmeter"></span> </p>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <p>Enter the number in feet to be converted into inches </p>
+                    <p>
+                        <label>Feet</label>
+                        <input type="number" id="infeet2" placeholder="feet" oninput="inchconvertor(this.value)" onoutput="inchconvertor(this.value)">
+                    </p>
+                    <p>Inches: <span id="outinch"></span> </p>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <p>Enter the number in feet to be converted into centimeter </p>
+                    <p>
+                        <label>Feet</label>
+                        <input type="number" id="infeet3" placeholder="feet" oninput="cmconvertor(this.value)" onoutput="cmconvertor(this.value)">
+                    </p>
+                    <p>Centimeter: <span id="outcm"></span> </p>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <p>Enter the number in feet to be converted into yards </p>
+                    <p>
+                        <label>Feet</label>
+                        <input type="number" id="infeet4" placeholder="feet" oninput="yardsconvertor(this.value)" onoutput="yardconvertor(this.value)">
+                    </p>
+                    <p>Yards: <span id="outyard"></span> </p>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <p>Enter the number in feet to be converted into Kilometers </p>
+                    <p>
+                        <label>Feet</label>
+                        <input type="number" id="infeet5" placeholder="feet" oninput="kmconvertor(this.value)" onoutput="kmconvertor(this.value)">
+                    </p>
+                    <p>Kilometer: <span id="outkm"></span> </p>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <p>Enter the number in feet to be converted into Miles </p>
+                    <p>
+                        <label>Feet</label>
+                        <input type="number" id="infeet6" placeholder="feet" oninput="milesconvertor(this.value)" onoutput="milesconvertor(this.value)">
+                    </p>
+                    <p>Miles: <span id="outmiles"></span> </p>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <p>Enter the number in centimeter to converted into feet</p>
+                    <p>
+                        <label>Cm</label>
+                        <input type="number" id="incm1" placeholder="Centimeter" oninput="feetsconvertor(this.value)" onoutput="feet1convertor(this.value)">
+                    </p>
+                    <p>Centimeter: <span id="outfeet1"></span> </p>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <p>Enter the number in centimeter to converted into Meters</p>
+                    <p>
+                        <label>Cm</label>
+                        <input type="number" id="incm2" placeholder="Centimeter" oninput="metersconvertor(this.value)" onoutput="meter1convertor(this.value)">
+                    </p>
+                    <p>Centimeter: <span id="outmeter1"></span> </p>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <p>Enter the number in centimeter to converted into Inch</p>
+                    <p>
+                        <label>Cm</label>
+                        <input type="number" id="incm3" placeholder="Centimeter" oninput="inchessconvertor(this.value)" onoutput="inches1convertor(this.value)">
+                    </p>
+                    <p>Centimeter: <span id="outinches1"></span> </p>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <p>Enter the number in centimeter to converted into yards</p>
+                    <p>
+                        <label>Cm</label>
+                        <input type="number" id="incm4" placeholder="Centimeter" oninput="yardssconvertor(this.value)" onoutput="yards1convertor(this.value)">
+                    </p>
+                    <p>Centimeter: <span id="outyards1"></span> </p>
+                </th>
+            </tr>
+
+            <script>
+                function meterconvertor(val)
+                {
+                    document.getElementById("outmeter").innerHTML=val/3.2808;
+                }
+
+                function inchconvertor(val)
+                {
+                    document.getElementById("outinch").innerHTML=val*12;
+                }
+
+                function cmconvertor(val)
+                {
+                    document.getElementById("outcm").innerHTML=val/0.032808;
+                }
+
+                function yardsconvertor(val)
+                {
+                    document.getElementById("outyard").innerHTML=val*0.33333;
+                }
+
+                function kmconvertor(val)
+                {
+                    document.getElementById("outkm").innerHTML=val/3280.8;
+                }
+
+                function milesconvertor(val)
+                {
+                    document.getElementById("outmiles").innerHTML=val*0.00018939;
+                }
+
+                function feetsconvertor(val)
+                {
+                    document.getElementById("outfeet1").innerHTML=val*0.032808;
+                }
+
+                function metersconvertor(val)
+                {
+                    document.getElementById("outmeter1").innerHTML=val/100;
+                }
+
+                function inchessconvertor(val)
+                {
+                    document.getElementById("outinches1").innerHTML=val*0.39370;
+                }
+
+                function yardssconvertor(val)
+                {
+                    document.getElementById("outyards1").innerHTML=val*0.010936;
+                }
+
+            </script>
+        </table>
+    </div>
+</div>
+</body>
+</html>
